@@ -1,0 +1,25 @@
+#Factorial Task
+def factorial(number):
+    if number == 0:
+        answer = 1
+    else:
+        answer = number * factorial(number - 1)
+    return answer
+num = int(input("Input a number : "))
+print(factorial(num))
+
+if factorial(num) % 2 == 0:
+    print("The number is even")
+else:
+    print("The number is odd")
+
+
+
+
+# Fibonacci Task
+def fibonacci(number):
+    if (number == 1 or number == 2):
+        return 1
+    else:
+        return fibonacci(number - 1) + fibonacci(number - 2)
+print(fibonacci(7))
