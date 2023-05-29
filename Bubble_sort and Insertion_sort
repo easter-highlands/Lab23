@@ -1,0 +1,19 @@
+def bubble_sort(name_of_array):
+    for i in range(0, len(name_of_array)):
+        for y in range(1, len(name_of_array)):
+            if name_of_array[y - 1] > name_of_array[y]:
+                temp = name_of_array[y]
+                name_of_array[y] = name_of_array[y - 1]
+                name_of_array[y - 1] = temp
+    return name_of_array
+
+
+def insertion_sort(array_name):
+    for m in range(1, len(array_name)):
+        temp = array_name[m]
+        j = m
+        while j > 0 and array_name[j - 1] > temp:
+            array_name[j] = array_name[j - 1]
+            j = j - 1
+        array_name[j] = temp
+    return array_name
