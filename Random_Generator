@@ -1,0 +1,15 @@
+import random
+words = ["b", "a", "L", "i", "b"]
+count = 0
+for g in range(0, 100000):
+    store = ""
+    store = store + random.choice(words)
+    store = store + random.choice(words)
+    store = store + random.choice(words)
+    store = store + random.choice(words)
+    store = store + random.choice(words)
+    count += 1
+    print(count)
+    print(store)
+    if store == "Labib":
+        break
