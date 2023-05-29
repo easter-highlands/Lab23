@@ -1,0 +1,19 @@
+class student:
+    def __init__(self, name, age, future_target):
+        self.name = name
+        self.age = age
+        self.future_target = future_target
+
+
+    def GotName(self):
+        return self.name
+
+    def GotAge(self):
+        return self.age
+
+    def GotMajor(self):
+        return self.future_target
+
+
+Student1 = student("Labib", 20, "Programming")
+Student2 = student("Albab", 12, "Hacking")
