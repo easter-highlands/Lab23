@@ -1,0 +1,19 @@
+def Mid(start, end, phrase):
+    store = ""
+    for i in range(start, end):
+        store = store + phrase[i]
+    return store
+
+
+def Left(phrase):
+    store = ""
+    for i in phrase:
+        store = store + i
+    return store
+
+
+def Right(phrase):
+    store = ""
+    for i in phrase:
+        store = i + store
+    return store
