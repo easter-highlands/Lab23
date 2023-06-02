@@ -1,0 +1,9 @@
+def assending_number(num):
+    if num == 100:
+        answer = 1
+    else:
+        answer = num + assending_number(num + 10)
+    return answer
+
+
+print(assending_number(10))
