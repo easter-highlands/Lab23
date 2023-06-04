@@ -1,0 +1,6 @@
+from tkinter import *
+result = Tk()
+phrase = "My name is Labib"
+name = Label(result, text=phrase)
+name.pack()
+result.mainloop()
