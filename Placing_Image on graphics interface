@@ -1,0 +1,12 @@
+from tkinter import *
+from PIL import ImageTk, Image
+base = Tk()
+base.title("Name_choose")
+IcongImage = PhotoImage(file="Youtube.png")
+base.iconphoto(False, IcongImage)
+myImg = ImageTk.PhotoImage(Image.open("Youtube.png"))
+myLabel = Label(image=myImg)
+myLabel.pack()
+b = Button(base, text='Exit', command=base.quit)
+b.pack()
+base.mainloop()
