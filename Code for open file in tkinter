@@ -1,0 +1,30 @@
+from tkinter import *
+#from PIL import Image, ImageTk
+from tkinter import messagebox
+from tkinter import filedialog
+base = Tk()
+base.title("File sending")
+iconImage = PhotoImage(file="download.png")
+base.iconphoto(True, iconImage)
+Message_Box = Label(base, text="Enter your file here : ")
+Message_Box.pack()
+Enter = Entry(base, width=30, font=('Arial 20'))
+Enter.pack()
+
+
+def answer():
+    if Enter.get() == "":
+        Label(base, text="NOt ok, Enter something").pack()
+    else:
+        #Label(base, text="Enter your words or message here : ")
+        #Enter2 = Entry(base, width=30, font=("Bold, 20"))
+        #Enter2.pack()
+        if Enter.get() == "C:" or Enter.get() == "E:" or Enter.get() == "F:" or Enter.get() == "G:":
+            file_name = filedialog.askopenfilename(initialdir=Enter.get(), title="Select a file")
+        else:
+            messagebox.showerror("INvalid input", "Invali input sorry try again")
+
+
+press = Button(base, text="Enter", command=answer)
+press.pack()
+base.mainloop()
