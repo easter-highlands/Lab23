@@ -1,0 +1,41 @@
+from tkinter import *
+base = Tk()
+base.title("Just an app")
+base.geometry("600x500")
+count = 30
+
+
+def Increase():
+    global Button3
+    global count
+    Button3.destroy()
+    count = count + 5
+    Button3 = Button(base, text="Exit", width=count, bg="green", borderwidth=10)
+    Button3.place(x=300, y=90)
+    if count > 0:
+        Button2 = Button(base, text="-", width=20, bg="yellow", borderwidth=10, command=Decrease, state=NORMAL)
+        Button2.place(x=20, y=120)
+
+
+def Decrease():
+    global Button3
+    global count
+    Button3.destroy()
+    count = count - 5
+    Button3 = Button(base, text="Exit", width=count, bg="green", borderwidth=10)
+    Button3.place(x=300, y=90)
+    if count <= 0:
+        Button2 = Button(base, text="-", width=20, bg="yellow", borderwidth=10, state=DISABLED)
+        Button2.place(x=20, y=120)
+    else:
+        Button2 = Button(base, text="-", width=20, bg="yellow", borderwidth=10, command=Decrease, state=NORMAL)
+        Button2.place(x=20, y=120)
+
+
+Button1 = Button(base, text="+", width=20, bg="yellow", borderwidth=10, command=Increase)
+Button1.place(x=20, y=40)
+Button2 = Button(base, text="-", width=20, bg="yellow", borderwidth=10, command=Decrease)
+Button2.place(x=20, y=120)
+Button3 = Button(base, text="Exit", width=30, bg="green", borderwidth=10)
+Button3.place(x=300, y=90)
+base.mainloop()
